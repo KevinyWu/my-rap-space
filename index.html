@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>My Rap Space</title>
+</head>
+
+  <body>
+    <p style="color: #FDB279" class="cursive">
+        You should hover over the logo...
+    </p>
+
+    <!-- Title -->
+    <p class="title">
+        <b>
+            𝓶𝔂 𝓻𝓪𝓹 𝓼𝓹𝓪𝓬𝓮
+        </b>
+    </p>
+
+    <!-- Intro GIF and description -->
+    <img class="image" src="images/mfdoom.gif" , height=275, width=222 />
+
+    <p class="cursive">
+        <b>
+            Welcome to My Rap Space, the free online freestyle tool! Whether you're livening up the playground or chilling on the bus, just
+            enter any word to generate a list of rhyming ones below. Then drop the beat and start spitting :)
+        </b>
+    </p>
+
+    <p>&nbsp;</p>
+
+    <!-- Takes input and calls RhymeBrain API -->
+    <form class="rhyme-container" action="javascript:RhymeBrainSubmit()">
+        <input class="textbar" type=text id="RhymeBrainInput" placeholder="Enter word here!" class="format">
+
+        <input type=submit value="Rhyme" class="btn">
+    </form>
+
+    <script type="text/javascript">
+        var RhymeBrainMaxResults = 20;
+    </script>
+
+    <script type="text/javascript" src="rhyme.js"></script>
+
+    <p>&nbsp;</p>
+
+    <!-- audio player -->
+    <div class="rhyme-container">
+        <audio id="player" controls autoplay loop
+                src="music/music0.mp3" , class="format">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="next" onclick="playNext()" , class="btn">Next</button>
+    </div>
+
+
+    <script>
+        var audio = document.getElementById("player");
+        audio.volume = 0.15;
+    </script>
+
+
+    <!-- playlist -->
+    <ul id="playlist" class="hide">
+        <li data="music/1nceagain.mp3"> 1nceagain </li>
+        <li data="music/21questions.mp3"> 21questions </li>
+        <li data="music/2009.mp3"> 2009 </li>
+        <li data="music/accordion.mp3"> accordion </li>
+        <li data="music/aletter.mp3"> aletter </li>
+        <li data="music/alkaline.mp3"> alkaline </li>
+        <li data="music/aintnothingchanged.mp3"> aintnothingchanged </li>
+        <li data="music/astronomy.mp3"> astronomy </li>
+        <li data="music/atliens.mp3"> atliens </li>
+        <li data="music/badidea.mp3"> badidea </li>
+        <li data="music/balladofthebass.mp3"> balladofthebass </li>
+        <li data="music/betterdayz.mp3"> betterdayz </li>
+        <li data="music/bible.mp3"> bible </li>
+        <li data="music/bigbossrabbit.mp3"> bigbossrabbit </li>
+        <li data="music/bigfish.mp3"> bigfish </li>
+        <li data="music/birdseyeview.mp3"> birdseyeview </li>
+        <li data="music/bluebird.mp3"> bluebird </li>
+        <li data="music/blessingit.mp3"> blessingit </li>
+        <li data="music/bookofdays.mp3"> bookofdays </li>
+        <li data="music/boom.mp3"> boom </li>
+        <li data="music/celebrate.mp3"> celebrate </li>
+        <li data="music/charlesdegaulletojfk.mp3"> charlesdegaulletojfk </li>
+        <li data="music/cominghome.mp3"> cominghome </li>
+        <li data="music/comfortable.mp3"> comfortable </li>
+        <li data="music/cookiechips.mp3"> cookiechips </li>
+        <li data="music/curls.mp3"> curls </li>
+        <li data="music/deadpresidents.mp3"> deadpresidents </li>
+        <li data="music/deeper.mp3"> deeper </li>
+        <li data="music/dipsetforever.mp3"> dipsetforever </li>
+        <li data="music/doorags.mp3"> doorags </li>
+        <li data="music/everydaystruggle.mp3"> everydaystruggle </li>
+        <li data="music/everythingiam.mp3"> everythingiam </li>
+        <li data="music/faithful.mp3"> faithful </li>
+        <li data="music/familybusiness.mp3"> familybusiness </li>
+        <li data="music/farfowls.mp3"> farfowls </li>
+        <li data="music/feelinit.mp3"> feelinit </li>
+        <li data="music/flashinglights.mp3"> flashinglights </li>
+        <li data="music/fullmetal.mp3"> fullmetal </li>
+        <li data="music/gangsigns.mp3"> gangsigns </li>
+        <li data="music/gatdamn.mp3"> gatdamn </li>
+        <li data="music/girlsgirlsgirls.mp3"> girlsgirlsgirls </li>
+        <li data="music/goodnews.mp3"> goodnews </li>
+        <li data="music/handmedowns.mp3"> handmedowns </li>
+        <li data="music/harolds.mp3"> harolds </li>
+        <li data="music/heardemsay.mp3"> heardemsay </li>
+        <li data="music/heardemsay1.mp3"> heardemsay1 </li>
+        <li data="music/heyma.mp3"> heyma </li>
+        <li data="music/high.mp3"> high </li>
+        <li data="music/hikari.mp3"> hikari </li>
+        <li data="music/hurtfeelings.mp3"> hurtfeelings </li>
+        <li data="music/icewater.mp3"> icewater </li>
+        <li data="music/invincible.mp3"> invincible </li>
+        <li data="music/iwonder.mp3"> iwonder </li>
+        <li data="music/january28th.mp3"> january28th </li>
+        <li data="music/justbegun.mp3"> justbegun </li>
+        <li data="music/keepitmoving.mp3"> keepitmoving </li>
+        <li data="music/krithere.mp3"> krithere </li>
+        <li data="music/kumomi.mp3"> kumomi </li>
+        <li data="music/letthebeatbuild.mp3"> letthebeatbuild </li>
+        <li data="music/lifegoeson.mp3"> lifegoeson </li>
+        <li data="music/lightontheland.mp3"> lightontheland </li>
+        <li data="music/likewater.mp3"> likewater </li>
+        <li data="music/liquidswords.mp3"> liquidswords </li>
+        <li data="music/lookoveryourshoulder.mp3"> lookoveryourshoulder </li>
+        <li data="music/lordineedyou.mp3"> lordineedyou </li>
+        <li data="music/luvsic1.mp3"> luvsic1 </li>
+        <li data="music/luvsic2.mp3"> luvsic2 </li>
+        <li data="music/luvsic3.mp3"> luvsic3 </li>
+        <li data="music/luvsic4.mp3"> luvsic4 </li>
+        <li data="music/luvsic5.mp3"> luvsic5 </li>
+        <li data="music/luvsic6.mp3"> luvsic6 </li>
+        <li data="music/maskoff.mp3"> maskoff </li>
+        <li data="music/mathematics.mp3"> mathematics </li>
+        <li data="music/meanitinthemorning.mp3"> meanitinthemorning </li>
+        <li data="music/momentoftruth.mp3"> momentoftruth </li>
+        <li data="music/mrcarter.mp3"> mrcarter </li>
+        <li data="music/nasislike.mp3"> nasislike </li>
+        <li data="music/newbody.mp3"> newbody </li>
+        <li data="music/nexttime.mp3"> nexttime </li>
+        <li data="music/nohalo.mp3"> nohalo </li>
+        <li data="music/nomore.mp3"> nomore </li>
+        <li data="music/nooneoutside.mp3"> nooneoutside </li>
+        <li data="music/nopressure.mp3"> nopressure </li>
+        <li data="music/oldearth.mp3"> oldearth </li>
+        <li data="music/onlychildblues.mp3"> onlychildblues </li>
+        <li data="music/papertrails.mp3"> papertrails </li>
+        <li data="music/paristokyo.mp3"> paristokyo </li>
+        <li data="music/perfect.mp3"> perfect </li>
+        <li data="music/promnight.mp3"> promnight </li>
+        <li data="music/puresouls.mp3"> puresouls </li>
+        <li data="music/rainfall.mp3"> rainfall </li>
+        <li data="music/reborn.mp3"> reborn </li>
+        <li data="music/redeye.mp3"> redeye </li>
+        <li data="music/renegade.mp3"> renegade </li>
+        <li data="music/righteousminds.mp3"> righteousminds </li>
+        <li data="music/santeria.mp3"> santeria </li>
+        <li data="music/seemenow.mp3"> seemenow </li>
+        <li data="music/shutup.mp3"> shutup </li>
+        <li data="music/simplyamazin.mp3"> simplyamazin </li>
+        <li data="music/sledom.mp3"> sledom </li>
+        <li data="music/songcry.mp3"> songcry </li>
+        <li data="music/soulcustody.mp3"> soulcustody </li>
+        <li data="music/stillnotaplayer.mp3"> stillnotaplayer </li>
+        <li data="music/superheroes.mp3"> superheroes </li>
+        <li data="music/superstar.mp3"> superstar </li>
+        <li data="music/telepatia.mp3"> telepatia </li>
+        <li data="music/thatslove.mp3"> thatslove </li>
+        <li data="music/thatsthat.mp3"> thatsthat </li>
+        <li data="music/thefood.mp3"> thefood </li>
+        <li data="music/theheartandthetongue.mp3"> theheartandthetongue </li>
+        <li data="music/thenarrowpath.mp3"> thenarrowpath </li>
+        <li data="music/tiemyhands.mp3"> tiemyhands </li>
+        <li data="music/thereturn.mp3"> thereturn </li>
+        <li data="music/time.mp3"> time </li>
+        <li data="music/travelinman.mp3"> travelinman </li>
+        <li data="music/tylerherro.mp3"> tylerherro </li>
+        <li data="music/underthesun.mp3"> underthesun </li>
+        <li data="music/welcomeback.mp3"> welcomeback </li>
+        <li data="music/wayup.mp3"> wayup </li>
+        <li data="music/wemadeit.mp3"> wemadeit </li>
+        <li data="music/woman.mp3"> woman </li>
+        <li data="music/woods.mp3"> woods </li>
+        <li data="music/wubanga101.mp3"> wubanga101 </li>
+    </ul>
+
+    <!-- Randomize 1st Audio -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        var player = document.getElementById("player"),
+            playlist = document.getElementById("playlist");
+
+        selectRandom();
+
+        // RNG selector
+        function selectRandom() {
+            var list = $('ul > li');
+            list.eq(parseInt(Math.random() * list.length)).addClass('selected');
+
+
+            var selected = playlist.querySelector("li.selected");
+            player.src = selected.getAttribute("data");
+        }
+    </script>
+
+    <!-- Next button: no repeats -->
+    <script>
+        function playNext() {
+            var tempRemove = playlist.querySelector("li.selected");
+            tempRemove.classList.remove("selected");
+            playlist.removeChild(tempRemove);
+
+            selectRandom();
+
+            playlist.appendChild(tempRemove);
+        }
+    </script>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <p style="color: #FDB279" , class="cursive">
+        ...and click ctrl + shift + j (for Windows)!
+    </p>
+
+    <!-- Logo image -->
+    <img onMouseOver="display()" , class="logo" src="images/favicon.png" , height=25, width=25, id="logo" />
+
+    <script>
+        function display() {
+            console.log("Thanks for checking out the site! We hope you've had a... rapturous experience ~ KDE (January 24, 2021)")
+        }
+    </script>
+    
+    <p>&nbsp;</p>
+  </body>
+
+</html>
